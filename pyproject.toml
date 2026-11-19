@@ -1,0 +1,32 @@
+[project]
+name = "unleak"
+version = "0.1.0"
+description = "Blur emails, phone numbers, API keys and other sensitive data in screen recordings and screenshots. Runs 100% locally."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Jason Mello" }]
+keywords = ["redaction", "privacy", "screen-recording", "ocr", "blur", "secrets"]
+dependencies = [
+    "imageio-ffmpeg>=0.5",
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "phonenumbers>=8.13",
+    "rapidocr-onnxruntime>=1.4",
+]
+
+[project.scripts]
+unleak = "unleak.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/jasonmello/unleak"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

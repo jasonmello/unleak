@@ -2,7 +2,7 @@
 
 **Borra e-mails, telefones, chaves de API e senhas em gravações de tela e prints, antes de você compartilhar.** Um comando. Roda 100% no seu computador: nada é enviado para a internet.
 
-[English](README.md)
+[Site](https://jasonmello.github.io/unleak/) · [English](README.md)
 
 ![Antes: terminal e lista de clientes com chaves, e-mails e telefones à mostra](docs/img/before.png)
 

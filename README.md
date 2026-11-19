@@ -2,7 +2,7 @@
 
 **Blur e-mails, phone numbers, API keys and passwords in screen recordings and screenshots, before you share them.** One command. Runs 100% on your computer: nothing is uploaded.
 
-[Português](README.pt-BR.md)
+[Website](https://jasonmello.github.io/unleak/) · [Português](README.pt-BR.md)
 
 Before:
 

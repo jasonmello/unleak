@@ -1,42 +1,42 @@
 # unleak
 
-CLI em Python que borra dados sensíveis (e-mail, telefone, chaves de API, senhas, CPF/CNPJ, cartão) em gravações de tela e prints. Roda tudo local: OCR (RapidOCR) + regras. Público: quem programa e quem usa IA, em macOS, Windows e Linux.
+Python CLI that blurs sensitive data (e-mail, phone, API keys, passwords, CPF/CNPJ, card numbers) in screen recordings and screenshots. Everything runs locally: OCR (RapidOCR) plus rules. Audience: developers and people who use AI tools, on macOS, Windows and Linux.
 
-## Onde está cada coisa
-| O quê | Onde |
+## Where things are
+| What | Where |
 |---|---|
-| Linha de comando e opções | `src/unleak/cli.py` |
-| Laço do vídeo (quando ler, o que segurar) | `src/unleak/pipeline.py` |
-| OCR, caixas, rastreio e borrão | `src/unleak/regions.py` |
-| Leitura e gravação de vídeo (ffmpeg) | `src/unleak/video.py` |
-| Detectores de texto | `src/unleak/detectors/` |
-| Relatório HTML e JSON | `src/unleak/report.py` |
-| Skill para Claude Code e Codex | `skills/unleak/SKILL.md` |
-| Testes | `tests/` |
+| Command line and options | `src/unleak/cli.py` |
+| Video loop (when to read, what to hold back) | `src/unleak/pipeline.py` |
+| OCR, boxes, tracking and blur | `src/unleak/regions.py` |
+| Reading and writing video (ffmpeg) | `src/unleak/video.py` |
+| Text detectors | `src/unleak/detectors/` |
+| HTML report and JSON | `src/unleak/report.py` |
+| Skill for Claude Code and Codex | `skills/unleak/SKILL.md` |
+| Tests | `tests/` |
 
-## Comandos
-- Instalar: `uv sync`
-- Testes: `uv run pytest -q` (o de ponta a ponta leva cerca de 1 minuto)
-- Conferir docs: `uv run python scripts/check_docs.py`
-- Rodar: `uv run unleak arquivo.mp4`
+## Commands
+- Install: `uv sync`
+- Tests: `uv run pytest -q` (the end-to-end test takes about a minute)
+- Check docs: `uv run python scripts/check_docs.py`
+- Run: `uv run unleak file.mp4`
 
-## Regras que não se quebram
-- **Nada sai do computador.** Sem chamada de rede, sem LLM na detecção, sem telemetria.
-- **Na dúvida, borra.** Falso positivo é aceitável; vazamento não.
-- O relatório e o JSON nunca mostram o valor escondido, só a versão mascarada (`mask` em `src/unleak/report.py`).
-- A saída nunca sobrescreve a entrada.
-- Dados de exemplo e de teste são sempre falsos.
-- Detector novo entra com teste do que pega e do que não pode pegar.
-- Git e GitHub: skill `fluxo-github`.
+## Rules that are never broken
+- **Nothing leaves the computer.** No network calls, no LLM in detection, no telemetry.
+- **When in doubt, blur.** A false positive is acceptable; a leak is not.
+- The report and the JSON never show a hidden value, only the masked form (`mask` in `src/unleak/report.py`).
+- The output never overwrites the input.
+- Example and test data is always fake.
+- A new detector ships with tests for what it catches and what it must not catch.
+- Everything in the repository is written in English. `README.pt-BR.md` is the only translation.
 
-## Não verificado
-- Windows e Linux: só o macOS (Apple Silicon) foi testado à mão. O CI cobre os três, mas ainda não rodou.
-- Gravação de tela real: os testes usam vídeos sintéticos.
-- Publicação no PyPI: ainda não feita; a instalação é pelo Git.
+## Not verified
+- Windows and Linux: only macOS (Apple Silicon) was tested by hand. CI covers all three.
+- Real screen recordings: the tests use synthetic videos.
+- PyPI: not published yet; installation is from Git.
 
-## Antes de X, leia Y
-| Antes de | Leia |
+## Before X, read Y
+| Before | Read |
 |---|---|
-| Mexer no laço do vídeo, no rastreio ou no desempenho | `docs/arquitetura.md` |
-| Mudar uma escolha já feita (bibliotecas, borrão, nome) | `docs/decisoes.md` |
-| Mexer no relatório HTML, nas mensagens da CLI ou nos READMEs | `DESIGN.md` |
+| Touching the video loop, tracking or performance | `docs/architecture.md` |
+| Changing a choice already made (libraries, blur, name) | `docs/decisions.md` |
+| Touching the HTML report, CLI messages or the READMEs | `DESIGN.md` |

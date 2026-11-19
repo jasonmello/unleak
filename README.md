@@ -97,7 +97,7 @@ Speed: a 20-second 1080p recording with scrolling and typing took 47 seconds on 
 4. Frames between two OCR passes are held back and covered with the areas from both passes, so text is hidden from the first frame where it shows up. While the page scrolls, the hidden areas follow the pixels.
 5. Each area is shrunk to a few pixels and enlarged again, which destroys the detail instead of smearing it.
 
-More in [docs/arquitetura.md](docs/arquitetura.md) (in Portuguese).
+More in [docs/architecture.md](docs/architecture.md).
 
 ## Roadmap
 

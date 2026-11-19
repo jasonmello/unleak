@@ -1,44 +1,44 @@
 # Design
 
-Tirado do código: `src/unleak/report.py` (relatório) e `src/unleak/cli.py` (mensagens). Mudou lá, mude aqui.
+Taken from the code: `src/unleak/report.py` (report) and `src/unleak/cli.py` (messages). If it changes there, change it here.
 
-## Princípios
-- **Honesto antes de tranquilizador.** Toda saída lembra que a ferramenta reduz o risco e não elimina.
-- **Nunca mostrar o que foi escondido.** Texto sempre mascarado (`mask`), miniaturas sempre do vídeo já borrado.
-- **Um arquivo, sem rede.** O relatório é um HTML único, com CSS embutido e imagens em base64. Sem fonte externa, sem script.
+## Principles
+- **Honest before reassuring.** Every output reminds the reader that the tool lowers the risk and does not remove it.
+- **Never show what was hidden.** Text is always masked (`mask`), thumbnails always come from the already-blurred output.
+- **One file, no network.** The report is a single HTML file with inline CSS and base64 images. No external font, no script.
 
-## Cores (variáveis CSS do relatório)
-| Token | Claro | Escuro | Uso |
+## Colours (CSS variables in the report)
+| Token | Light | Dark | Use |
 |---|---|---|---|
-| `--bg` | `#f6f5f1` | `#151412` | fundo da página |
-| `--card` | `#ffffff` | `#1e1d1a` | cartão de cada item |
-| `--ink` | `#1c1b19` | `#f1efe9` | texto |
-| `--muted` | `#6b6862` | `#a19d94` | texto secundário, tempos |
-| `--line` | `#e3e0d8` | `#33312c` | bordas e divisórias |
-| `--accent` | `#c2410c` | `#fb923c` | barra do aviso de limite |
+| `--bg` | `#f6f5f1` | `#151412` | page background |
+| `--card` | `#ffffff` | `#1e1d1a` | card of each item |
+| `--ink` | `#1c1b19` | `#f1efe9` | text |
+| `--muted` | `#6b6862` | `#a19d94` | secondary text, times |
+| `--line` | `#e3e0d8` | `#33312c` | borders and dividers |
+| `--accent` | `#c2410c` | `#fb923c` | bar of the limits note |
 
-O tema escuro segue `prefers-color-scheme`. Na miniatura, a área escondida leva contorno vermelho de 2 px (BGR 60, 60, 235, em `_thumbnail` de `src/unleak/pipeline.py`).
+The dark theme follows `prefers-color-scheme`. In a thumbnail, the hidden area gets a 2 px red outline (BGR 60, 60, 235, in `_thumbnail` in `src/unleak/pipeline.py`).
 
-## Tipografia
-- Texto: fonte do sistema (`ui-sans-serif, system-ui`), 15 px, entrelinha 1.5.
-- Título: 26 px. Números de destaque: 22 px, com algarismos tabulares.
-- Valor mascarado: monoespaçada do sistema, 13 px.
+## Typography
+- Text: system font (`ui-sans-serif, system-ui`), 15 px, line height 1.5.
+- Title: 26 px. Headline numbers: 22 px, tabular figures.
+- Masked value: system monospace, 13 px.
 
-## Espaço e componentes
-- Coluna única de até 880 px, com 16 px de margem lateral.
-- Faixa de números (itens escondidos, duração, frames lidos) entre duas linhas.
-- Aviso de limite: parágrafo com barra de 3 px à esquerda, sem caixa.
-- Item: cartão com raio de 10 px e borda de 1 px; tipo, valor mascarado, intervalo de tempo e miniatura.
-- Área escondida no vídeo e na imagem: borrão com 20% de cinza por cima (`redact` em `src/unleak/regions.py`), para continuar visível em fundo claro ou escuro.
-- Sem movimento: o relatório é estático.
+## Space and components
+- Single column up to 880 px wide, with a 16 px side gutter.
+- Stats row (items hidden, video length, frames read) between two rules.
+- Limits note: a paragraph with a 3 px bar on the left, no box.
+- Item: card with a 10 px radius and a 1 px border; kind, masked value, time range and thumbnail.
+- Hidden area in the video and image: blur with 20% grey on top (`redact` in `src/unleak/regions.py`), so it stays visible on light and dark backgrounds.
+- No motion: the report is static.
 
-## Voz
-- Inglês simples no produto (CLI, relatório, README). Português em `README.pt-BR.md` e nos docs internos.
-- Frases curtas, verbo direto: "3 items hidden", "Check the output before you share it."
-- Diga o que aconteceu e o que a pessoa faz a seguir. Sem exclamação, sem promessa de segurança total.
-- Erros começam com `unleak:` e dizem como resolver.
-- Tempos no formato `m:ss.s`.
+## Voice
+- Plain English everywhere. `README.pt-BR.md` is the only translation.
+- Short sentences, direct verbs: "3 items hidden", "Check the output before you share it."
+- Say what happened and what the person does next. No exclamation marks, no promise of total safety.
+- Errors start with `unleak:` and say how to fix the problem.
+- Times use the `m:ss.s` format.
 
-## Conteúdo
-- Exemplos e imagens usam só dados falsos, e dizem isso.
-- O nome do tipo mostrado à pessoa vem de `LABELS` em `src/unleak/report.py`.
+## Content
+- Examples and images use fake data only, and say so.
+- The kind name shown to people comes from `LABELS` in `src/unleak/report.py`.

@@ -1,0 +1,7 @@
+# The tests and docs are full of fake keys on purpose: that is what the tool detects.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Fake secrets used as test fixtures"
+paths = ['''^tests/''', '''^docs/img/''']

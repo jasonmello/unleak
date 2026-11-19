@@ -42,3 +42,16 @@ The dark theme follows `prefers-color-scheme`. In a thumbnail, the hidden area g
 ## Content
 - Examples and images use fake data only, and say so.
 - The kind name shown to people comes from `LABELS` in `src/unleak/report.py`.
+
+## Landing page (`docs/index.html`)
+One HTML file with inline CSS and JS, no build step and no external request. Personality: calm, warm paper, mono for anything technical, and one idea repeated everywhere: **the page redacts itself**.
+
+- **Redaction bar** (`.s`): the only decorative device. A bar grows from the left over the text (240 ms) and the text turns transparent. It is used on the logo, one word of the headline, the demo screen, the try-it box and the detector cards. Nothing else on the page animates for show.
+- **Tokens**: the report palette above, plus surface steps (`--surface`, `--surface-2`, `--surface-3`), three text levels (`--ink`, `--muted`, `--subtle`) and borders drawn as 1 px shadow rings (`--shadow-rest`, `--shadow-float`). Light and dark follow the system; the sun button overrides it.
+- **Type**: system sans for prose, system mono for labels, commands, samples and counters. Headline tracking goes from -0.035em (section titles) to -0.05em (hero). Labels are 11 px mono, uppercase, +0.09em.
+- **Radius by role**: controls 8 px, cards 14 px, panels 18 px.
+- **Motion**: one curve, `cubic-bezier(.22, 1, .36, 1)`; 140 ms for hover and press, 240 ms for the bar. Buttons scale to .97 when pressed. The hero scan line crosses the demo once in 1.1 s and each secret hides as the line reaches it. With reduced motion everything switches instantly.
+- **Honesty rules**: every value shown is fake and the page says so twice. The try-it box runs a JS port of the detectors and states that it skips OCR. The limits section is on the page, not only in the README.
+- **Copy**: facts and verbs. No "seamless", no "powerful". The primary button is solid ink; the accent colour is kept for the bar, focus rings, counters and step numbers.
+
+Changing a detector in `src/unleak/detectors/` means updating the `RULES` list in `docs/index.html` too.

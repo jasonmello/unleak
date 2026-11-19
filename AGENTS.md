@@ -12,6 +12,7 @@ Python CLI that blurs sensitive data (e-mail, phone, API keys, passwords, CPF/CN
 | Text detectors | `src/unleak/detectors/` |
 | HTML report and JSON | `src/unleak/report.py` |
 | Skill for Claude Code and Codex | `skills/unleak/SKILL.md` |
+| Landing page (single file, no build) | `docs/index.html` |
 | Tests | `tests/` |
 
 ## Commands
@@ -39,4 +40,4 @@ Python CLI that blurs sensitive data (e-mail, phone, API keys, passwords, CPF/CN
 |---|---|
 | Touching the video loop, tracking or performance | `docs/architecture.md` |
 | Changing a choice already made (libraries, blur, name) | `docs/decisions.md` |
-| Touching the HTML report, CLI messages or the READMEs | `DESIGN.md` |
+| Touching the HTML report, the landing page, CLI messages or the READMEs | `DESIGN.md` |

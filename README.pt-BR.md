@@ -56,4 +56,6 @@ O `unleak` reduz o risco, mas não elimina. **Assista ao resultado antes de comp
 
 ## Licença
 
-MIT
+[AGPL-3.0-or-later](LICENSE). Copyright (c) 2026 Jason Mello.
+
+Você pode usar, estudar e modificar o unleak, e contribuições são bem-vindas. Quem distribuir o unleak ou uma versão baseada nele precisa manter esta licença, publicar o código e manter o crédito.

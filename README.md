@@ -107,4 +107,6 @@ More in [docs/architecture.md](docs/architecture.md).
 
 ## License
 
-MIT
+[AGPL-3.0-or-later](LICENSE). Copyright (c) 2026 Jason Mello.
+
+You can use, study and change unleak, and contributions are welcome. If you distribute it or a version based on it, you must keep this licence, publish your source and keep the credit.

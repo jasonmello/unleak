@@ -3,7 +3,7 @@ name = "unleak"
 version = "0.1.0"
 description = "Blur emails, phone numbers, API keys and other sensitive data in screen recordings and screenshots. Runs 100% locally."
 readme = "README.md"
-license = "MIT"
+license = "AGPL-3.0-or-later"
 requires-python = ">=3.10"
 authors = [{ name = "Jason Mello" }]
 keywords = ["redaction", "privacy", "screen-recording", "ocr", "blur", "secrets"]

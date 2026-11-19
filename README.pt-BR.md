@@ -2,7 +2,7 @@
 
 **Borra e-mails, telefones, chaves de API e senhas em gravações de tela e prints, antes de você compartilhar.** Um comando. Roda 100% no seu computador: nada é enviado para a internet.
 
-[English](README.md)
+[Site](https://jasonmello.github.io/unleak/) · [English](README.md)
 
 ![Antes: terminal e lista de clientes com chaves, e-mails e telefones à mostra](docs/img/before.png)
 
@@ -56,4 +56,6 @@ O `unleak` reduz o risco, mas não elimina. **Assista ao resultado antes de comp
 
 ## Licença
 
-MIT
+[AGPL-3.0-or-later](LICENSE). Copyright (c) 2026 Jason Mello.
+
+Você pode usar, estudar e modificar o unleak, e contribuições são bem-vindas. Quem distribuir o unleak ou uma versão baseada nele precisa manter esta licença, publicar o código e manter o crédito.

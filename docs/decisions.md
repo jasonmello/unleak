@@ -13,3 +13,4 @@
 | 2026-11-19 | Report and JSON show only masked values and thumbnails from the already-blurred output | The report is often shared with the video; it must not become another leak. |
 | 2026-11-19 | Regions are paired by kind, size and distance | The end-to-end test showed that pairing by text fails: OCR reads the same key differently each time. |
 | 2026-11-19 | All repository content in English | The project is public and aimed at a global audience. `README.pt-BR.md` is the only translation. |
+| 2026-11-19 | Licence changed from MIT to AGPL-3.0-or-later | The author wants contributions but not closed or uncredited republishing. AGPL is the strongest protection that is still open source. Copies made while the code was MIT keep that licence. |
